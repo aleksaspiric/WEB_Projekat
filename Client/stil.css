@@ -1,0 +1,394 @@
+.prvaStrana{
+    align-items: center;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: lightskyblue;
+}
+.prvaStranaDugme{
+    align-items: center;
+    flex:3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.naslov{
+    flex:1;
+    font-style: italic;
+    font-size: 100px;
+    align-items: center;
+}
+
+.radioIme{
+    flex: 3;
+    width: 200px;
+    font-size: x-large;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.radioDugme{
+    flex:1;
+    
+    display: flex;
+    flex-direction: row;
+}
+.dugmePrvo{
+    flex:1;
+    max-height: 80px;
+    width: 300px;
+    font-size: xx-large;
+}
+
+.container{
+    min-height: 1000px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color:lightskyblue;
+    border-bottom: 1px solid black;
+}
+
+.top{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.divOpcija
+{
+    display: flex;
+    background-color:grey;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 45px;
+    
+    flex-wrap: wrap;
+}
+.nazivKluba{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.estetikDugme:hover {
+	background-color: darkgrey;
+	scale: 1.2;
+}
+
+.link{
+    font-family:fantasy;
+    color: black;
+}
+
+.sort{
+    font-family:fantasy;
+    color: black;
+}
+
+.bot{
+    flex:6;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.formAdd{
+    align-items: center;
+    flex:6;
+    display: flex;
+    flex-direction: column;
+}
+
+.select2
+{
+    width: 100px;
+}
+
+.godInput
+{
+    width: 55px;
+}
+
+.select3
+{
+    width: 45px;
+}
+
+.divTrajanje
+{
+    display: flex;
+}
+
+.vremeInput
+{
+    width: 50px;
+}
+
+.pomeraj
+{
+    margin-top: 10px;
+}
+
+.opisInput
+{
+  
+    height: 30px;
+}
+
+.formDodaj
+{
+    margin-top: 50px;
+   
+    display: flex;
+    
+    flex-direction: column;
+    width: 200px;
+}
+
+.lbl
+{
+    margin-left: 4px;
+}
+
+a {
+	text-decoration: none;
+    width: 200px;
+    text-align: center;
+}
+
+.select2
+{
+    width: 100px;
+}
+
+.godInput
+{
+    width: 55px;
+}
+
+.select3
+{
+    width: 45px;
+}
+
+.divTrajanje
+{
+    display: flex;
+}
+
+.vremeInput
+{
+    width: 50px;
+}
+
+.pomeraj
+{
+    margin-top: 10px;
+}
+
+.opisInput
+{
+  
+    height: 30px;
+}
+
+.pIo
+{
+    height: 30px;
+    width: 100px;
+}
+
+.but2{
+    height: 35px;
+    width:100px;
+}
+.bot3{
+    flex:6;
+    display: flex;
+    flex-direction: column;
+}
+
+.bojiKockicu
+{
+    flex:4;
+    background-color:palegoldenrod;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.opisL{
+    margin-top: 3px;
+    margin-left: 7px; 
+}
+
+.red2
+{
+    flex:4;
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ocenaRed
+{
+    flex:1;
+    display: flex;
+    flex-grow: 1;
+    
+    margin-left: 50px;
+
+    
+   margin-bottom: 150px;
+   margin-top: 50px;
+    min-width: 170px;
+    
+    
+}
+
+
+.proc
+{   
+
+    align-self: center;
+    padding-bottom: 50px;
+    padding-left: 10px;
+}
+
+
+.divFilm{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+
+.divFormaFilma{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    margin-left: 10px;   
+    margin-right: 10px; 
+    margin-bottom: 5px;
+}
+.prostor{
+    flex:1;
+    display: flex;
+    flex-direction:column;
+
+    margin-left: 10px;   
+    margin-right: 10px; 
+    margin-bottom: 5px;
+
+}
+.prostorZaGlumca{
+    max-height: 90px;
+    display: flex;
+    flex-direction: column;
+
+}
+.formaFilma{
+    flex:3;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+.divZaGlumce{
+    flex:5;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.divNaziv{
+    flex:1;
+    max-width: 220px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.divIme{
+    font-size: 20px;
+    font-weight: bold;
+}
+.divDugmici{
+    display: flex;
+    flex-direction: row;
+}
+.nazivInput{
+    max-width: 150px;
+}
+.reziserInput{
+    max-width: 150px;
+}
+.opisInput{
+    max-width: 300px;
+    max-height: 150px;
+    min-height: 40px;
+}
+
+.bot4{
+    flex:6;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;  
+}
+
+.space{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;  
+}
+
+.space2{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;  
+}
+
+.space3{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;  
+}
+
+
+.bot5{
+    flex:6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formDodajG{
+    margin-top: 50px;
+
+   
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
