@@ -44,9 +44,7 @@ namespace Server.Controllers
         public async Task<ActionResult> dodajFilm(int idk, [FromBody] Film film)
         {
             var videoklub = DbContext.VideoKlubovi.Find(idk);
-            
-            var provera = DbContext.Filmovi.Where(x=>x.Naziv == film.Naziv);
-            
+
             if(film.Naziv == "" || film.Reziser == "" || film.Opis=="" || film.Zanr==""|| film.Opis=="")
                 throw new System.Exception("Greska!");
 

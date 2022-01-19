@@ -764,7 +764,12 @@ export class VideoKlub
                 alert("Vec postoji !");
                 return;
             }
+            else{
+                this.crtajBot(2);
+            }
         });
+
+        
     }
 
     dodajGlumca(host)
@@ -814,6 +819,9 @@ export class VideoKlub
             {
                 alert("Vec postoji !");
                 return;
+            }
+            else if(res.status==200){
+                this.prikaziGlumce();
             }
         })
         

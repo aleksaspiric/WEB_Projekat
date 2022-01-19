@@ -47,15 +47,6 @@ namespace Server.Controllers
             if(glumac.Ime=="" || glumac.Prezime=="" || glumac.MestoRodjenja=="")
                 return StatusCode(406);
 
-            
-            var provera = DbContext.Glumci.Where(x=>x.Ime==glumac.Ime)
-                                            .Where(x=>x.Prezime==glumac.Prezime)
-                                            .Where(x=>x.GodRodjenja==glumac.GodRodjenja)
-                                            .Where(x=>x.MestoRodjenja==glumac.MestoRodjenja);
-            
-            if(provera!=null)
-                return BadRequest("Vec postoji glumac!");
-            
             DbContext.Glumci.Add(glumac);
             await DbContext.SaveChangesAsync();
             return Ok();
