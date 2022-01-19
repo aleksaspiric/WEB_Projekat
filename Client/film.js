@@ -31,7 +31,7 @@ export class Film
                 .then(gs => {
                     fetch("https://localhost:5001/Spoj/ObrisiGlumcaIzFilma/"+this.id+"/"+gs.id, {
                     method: "DELETE",
-                     })
+                        })
                 })
                 this.glumci.pop(g);
             })
@@ -107,14 +107,15 @@ export class Film
             {
                 this.obrisiGlumce();
 
-                    fetch("https://localhost:5001/Film/IzbrisiFilm/"+kid+"/"+this.id, {
-                        method: "DELETE",
-                    }).then(p=>
-                        { 
-                            if(!p.ok)
-                                alert("Neuspelo brisanje !");
-                        })
-                    
+                fetch("https://localhost:5001/Film/IzbrisiFilm/"+kid+"/"+this.id, {
+                    method: "DELETE",
+                }).then(p=>
+                    { 
+                        if(!p.ok)
+                            alert("Neuspelo brisanje !");
+                    })
+
+                this.miniKontejner.removeChild(formaFilm);
             })
 
         
@@ -299,10 +300,6 @@ export class Film
                     const mestoLab= document.createElement("label");
                     mestoLab.innerHTML="Mesto rodjenja glumca:" + gs.mestoRodjenja;
                     prostorZaGlumca.appendChild(mestoLab);
-
-                    const linija= document.createElement("label");
-                    linija.innerHTML="______________________";
-                    prostorZaGlumca.appendChild(linija);
                 });
             })
 

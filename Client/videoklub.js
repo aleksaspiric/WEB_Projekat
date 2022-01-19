@@ -90,7 +90,7 @@ export class VideoKlub
         divOpcija.appendChild(link);
         dodajFilm.onclick=(el=>
             {
-                let bot= this.container.querySelector(".bot");
+                let bot= this.container.querySelector(".botZaPrikazFilma");
                 if(bot!=null)
                     this.container.removeChild(bot);
 
@@ -314,7 +314,7 @@ export class VideoKlub
         divOpcija.appendChild(link5);
         dodajGlumca.onclick=(el=>
             {
-                let bot= this.container.querySelector(".bot");
+                let bot= this.container.querySelector(".botZaPrikazFilma");
                 if(bot!=null)
                     this.container.removeChild(bot);
 
@@ -414,11 +414,11 @@ export class VideoKlub
         if(formAdd!=null)
             this.container.removeChild(formAdd);
 
-        const bot1= this.container.querySelector(".bot");//ZA POCETNU
+        const bot1= this.container.querySelector(".botZaPrikazFilma");//ZA POCETNU
         if(bot1!=null)
             this.container.removeChild(bot1);
 
-        const bot3= this.container.querySelector(".bot3");//ZA SORTIRANJE BOTTOM
+        const bot3= this.container.querySelector(".bot3");
         if(bot3!=null)
             this.container.removeChild(bot3);
 
@@ -437,7 +437,7 @@ export class VideoKlub
             
 
         let bot= document.createElement("div");
-        bot.className="bot";
+        bot.className="botZaPrikazFilma";
         this.container.appendChild(bot); 
 
         let film;
@@ -480,11 +480,11 @@ export class VideoKlub
 
     sortirajFilmove()
     {
-        const bot2Form= this.container.querySelector(".formAdd");
-        if(bot2Form!=null)
-            this.container.removeChild(bot2Form);
+        const bot2= this.container.querySelector(".formAdd");
+        if(bot2!=null)
+            this.container.removeChild(bot2);
 
-        const bot1= this.container.querySelector(".bot");
+        const bot1= this.container.querySelector(".botZaPrikazFilma");
         if(bot1!=null)
             this.container.removeChild(bot1);
 
@@ -559,7 +559,7 @@ export class VideoKlub
         if(formAdd!=null)
             this.container.removeChild(formAdd);
 
-        const bot1= this.container.querySelector(".bot");
+        const bot1= this.container.querySelector(".botZaPrikazFilma");
         if(bot1!=null)
             this.container.removeChild(bot1);
             
@@ -667,11 +667,14 @@ export class VideoKlub
         space3.className ="space3";
         forma.appendChild(space3);
 
-        const dugmeZaDodavanje= document.createElement("button");
-        dugmeZaDodavanje.innerHTML="Nastavi";
-        dugmeZaDodavanje.className="but";
-        dugmeZaDodavanje.classList.add("pIo");
-        space3.appendChild(dugmeZaDodavanje);
+        if(radioIme.length>0)
+        {
+            const dugmeZaDodavanje= document.createElement("button");
+            dugmeZaDodavanje.innerHTML="Nastavi";
+            dugmeZaDodavanje.className="but";
+            dugmeZaDodavanje.classList.add("pIo");
+            space3.appendChild(dugmeZaDodavanje);
+        }
 
         dugmeZaDodavanje.onclick=(el=>
             {   

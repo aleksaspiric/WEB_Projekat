@@ -3,13 +3,16 @@ import { VideoKlub } from "./videoklub.js";
 
 let k;
 
-let prvaStrana = document.createElement("div");
-prvaStrana.className ="prvaStrana";
-document.body.appendChild(prvaStrana);
-
 function crtajVK()
 {
-       
+       const form = document.body.querySelector(".strana");
+       if(form!=null)
+              document.body.removeChild(form);
+
+       let prvaStrana = document.createElement("div");
+       prvaStrana.className ="prvaStrana";
+       document.body.appendChild(prvaStrana);
+
        let naslov = document.createElement("label");
        naslov.innerHTML = "WELCOME";
        naslov.className = "naslov";
@@ -49,13 +52,17 @@ function crtajVK()
                             radioIme.appendChild(labela);
                      })
        
-       let dugme = document.createElement("button");
-       dugme.innerHTML = "Nastavi";
-       dugme.className = "dugmePrvo";
-       dugme.onclick = (ev) => klik(prvaStrana);
-       prvaStrana.appendChild(dugme);
+       let dugmeNastavi = document.createElement("button");
+       dugmeNastavi.innerHTML = "Nastavi";
+       dugmeNastavi.className = "dugmePrvo";
+       dugmeNastavi.onclick = (ev) => klik(prvaStrana);
+       prvaStrana.appendChild(dugmeNastavi);
 
-
+       let dugmeDodavanje = document.createElement("button");
+       dugmeDodavanje.innerHTML = "Dodaj Videoklub";
+       dugmeDodavanje.className = "dugmePrvo";
+       dugmeDodavanje.onclick = (ev) => klikDodajVK();
+       prvaStrana.appendChild(dugmeDodavanje);
 
        });
 }
@@ -71,6 +78,70 @@ function klik(prvaStrana)
 
                      k.crtaj(document.body);
               })
+}
+
+function klikDodajVK()
+{
+       const form = document.body.querySelector(".prvaStrana");
+       if(form!=null)
+              document.body.removeChild(form);
+
+       let strana = document.createElement("div");
+       strana.className ="strana";
+       document.body.appendChild(strana);
+
+       
+       const nazivLab= document.createElement("h1");
+       nazivLab.innerHTML="Naziv kluba:";
+       strana.appendChild(nazivLab);
+       
+       const nazivInput= document.createElement("input");
+       nazivInput.className="nazivInput";
+       strana.appendChild(nazivInput);
+       
+       const dugmeNazad= document.createElement("button");
+       dugmeNazad.innerHTML="Nazad";
+       dugmeNazad.className ="pIo";
+       strana.appendChild(dugmeNazad);
+       dugmeNazad.onclick=(el=>{
+           crtajVK();
+       })
+
+       let dugmeDodaj = document.createElement("button");
+       dugmeDodaj.innerHTML = "Dodaj ";
+       dugmeDodaj.className = "pIo";
+       dugmeDodaj.onclick = (ev) => klikDodajVideoKlub(strana);
+       strana.appendChild(dugmeDodaj);
+
+}
+
+function klikDodajVideoKlub(host)
+{
+
+       const naziv= host.querySelector(".nazivInput").value;
+       if(naziv.length==0)
+       {
+           alert("Unesite naziv videokluba ! ");
+           return;
+       }
+
+       let videoklub = ({
+              naziv: naziv
+       })
+       fetch("https://localhost:5001/VideoKlub/dodajVideoKlub" ,{
+              method:"POST",
+              headers:{
+                  'Content-Type':'application/json'
+              },
+              body:JSON.stringify(videoklub)
+       })
+       .then(res =>{
+              if(res.status != 200)
+              {
+                  alert("Greska!");
+                  return;
+              }
+          });
 }
 
 crtajVK();

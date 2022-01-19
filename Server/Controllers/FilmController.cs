@@ -45,12 +45,15 @@ namespace Server.Controllers
         {
             var videoklub = DbContext.VideoKlubovi.Find(idk);
             
+            var provera = DbContext.Filmovi.Where(x=>x.Naziv == film.Naziv);
+            
             if(film.Naziv == "" || film.Reziser == "" || film.Opis=="" || film.Zanr==""|| film.Opis=="")
                 throw new System.Exception("Greska!");
 
             film.Klub = videoklub;
             DbContext.Filmovi.Add(film);
             videoklub.Trenutno++;
+            DbContext.VideoKlubovi.Update(videoklub);
             await DbContext.SaveChangesAsync();
 
             return Ok(); 
