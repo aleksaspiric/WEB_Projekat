@@ -1,4 +1,4 @@
-import { Glumac } from "./glumac.js";
+
 import { VideoKlub } from "./videoklub.js";
 
 let k;
@@ -77,13 +77,3 @@ crtajVK();
 
 
 
-//     let glumci = [];
-// let glumac = new Glumac("nesto","nesto",1999,"Kurbevac");
-// let glumac2 = new Glumac("nesto","nesto",1999,"Kurbevac");
-// let glumac3 = new Glumac("nesto","nesto",1999,"Kurbevac");
-// glumci.push(glumac);
-// glumci.push(glumac2);
-// glumci.push(glumac3);
-// glumci.forEach( p => p.crtajGlumca(document.body));
-
-// glumac.crtajGlumca(document.body);

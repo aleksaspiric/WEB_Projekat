@@ -5947,11 +5947,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\faks\\treca godina\\web\\WebProjekat\\Server\\Server.csproj",
+      "projectUniqueName": "D:\\faks\\treca godina\\web\\WebProjekat\\WEB_Projekat\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\faks\\treca godina\\web\\WebProjekat\\Server\\Server.csproj",
+      "projectPath": "D:\\faks\\treca godina\\web\\WebProjekat\\WEB_Projekat\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\Spira\\.nuget\\packages\\",
-      "outputPath": "D:\\faks\\treca godina\\web\\WebProjekat\\Server\\obj\\",
+      "outputPath": "D:\\faks\\treca godina\\web\\WebProjekat\\WEB_Projekat\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Spira\\AppData\\Roaming\\NuGet\\NuGet.Config",

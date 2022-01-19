@@ -144,7 +144,8 @@
 .formDodaj
 {
     margin-top: 50px;
-   
+
+    min-height: 300px;
     display: flex;
     
     flex-direction: column;
@@ -378,17 +379,20 @@ a {
 
 
 .bot5{
+    align-items: center;
     flex:6;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .formDodajG{
     margin-top: 50px;
 
-   
+    min-height: 300px;
     display: flex;
+    
     flex-direction: column;
     width: 200px;
+    letter-spacing: 1px;
+    border-spacing: 20px;
 }

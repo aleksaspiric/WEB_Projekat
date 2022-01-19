@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bo4ULy0qc+Yk0bfW7b3UTOquhtJcen7kub73ODn3vuKmfwoY/lTmBF7B8E50uZzMn9Q+hDKdfGlVru1x7+gJ5Q==",
+  "dgSpecHash": "jr5de49SVslmwV8JteXdMG00SLXCOWeoYNMaVtkrXiJn0JY2mFBmjQ/W5Hb0gHDlzEBOoYAR1qw17bNt+4SorQ==",
   "success": true,
-  "projectFilePath": "D:\\faks\\treca godina\\web\\WebProjekat\\Server\\Server.csproj",
+  "projectFilePath": "D:\\faks\\treca godina\\web\\WebProjekat\\WEB_Projekat\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Spira\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Spira\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

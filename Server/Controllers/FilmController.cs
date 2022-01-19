@@ -38,21 +38,13 @@ namespace Server.Controllers
 
             return filmovi.ToArray();    
         }
-
+        
         [HttpPost]
         [Route("dodajFilmUKlub/{idk}")]
         public async Task<ActionResult> dodajFilm(int idk, [FromBody] Film film)
         {
             var videoklub = DbContext.VideoKlubovi.Find(idk);
-
-            var provera = DbContext.Filmovi.Where(x=>x.Naziv==film.Naziv)
-                                            .Where(x=>x.Reziser==film.Reziser)
-                                            .Where(x=>x.Zanr==film.Zanr);
-
-            if(provera!=null)
-            {
-                return BadRequest("Vec postoji film!");
-            }
+            
             if(film.Naziv == "" || film.Reziser == "" || film.Opis=="" || film.Zanr==""|| film.Opis=="")
                 throw new System.Exception("Greska!");
 
